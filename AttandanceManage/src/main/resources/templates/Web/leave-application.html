@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有給申請</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>有給申請</h2>
+        <form id="leaveForm">
+            <label for="leaveDate">申請日:</label>
+            <input type="date" id="leaveDate" required>
+            <label for="reason">理由:</label>
+            <textarea id="reason" rows="4" required></textarea>
+            <button type="submit">申請する</button>
+        </form>
+        <p id="resultMessage"></p>
+    </div>
+
+    <script>
+        document.getElementById('leaveForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const leaveDate = document.getElementById('leaveDate').value;
+            const reason = document.getElementById('reason').value;
+            localStorage.setItem('leaveApplication', JSON.stringify({ leaveDate, reason }));
+            document.getElementById('resultMessage').textContent = '有給申請が完了しました。';
+        });
+    </script>
+</body>
+</html>
