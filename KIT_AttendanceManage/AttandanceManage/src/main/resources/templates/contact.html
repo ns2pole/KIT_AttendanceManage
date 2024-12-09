@@ -26,12 +26,22 @@
         <a href="history.html" class="button">勤怠状況一覧表示</a>
         <a href="login.html" class="button">ログアウト</a>
     </div>
-    
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('連絡先が登録されました。');
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const contactData = { phone, email };
+
+            fetch('/contacts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(contactData)
+            })
+            .then(response => response.json())
+            .then(data => alert('連絡先が登録されました。'))
+            .catch(error => alert('登録に失敗しました。'));
         });
     </script>
 </body>
