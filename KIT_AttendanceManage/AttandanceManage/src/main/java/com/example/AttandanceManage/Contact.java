@@ -1,16 +1,30 @@
 package com.example.AttandanceManage;
 
-@Entity
-@Data
 public class Contact {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false)
     private String phone;
-
-    @Column(nullable = false)
     private String email;
+
+    // コンストラクタ
+    public Contact(String phone, String email) {
+        this.phone = phone;
+        this.email = email;
+    }
+
+    // getterとsetter
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
