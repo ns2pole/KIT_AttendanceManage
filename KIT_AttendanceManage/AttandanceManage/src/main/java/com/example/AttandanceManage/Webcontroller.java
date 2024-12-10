@@ -5,37 +5,41 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Webcontroller {
-    @GetMapping("/attendance.html")
+    @GetMapping("/attendance")
     public String attendance(){
         return "attendance";
     }
 
-    @GetMapping("/contact.html")
+    @GetMapping("/contact")
     public String contact(){
 
         return "contact";
     }
-    @GetMapping("/history.html")
+    @GetMapping("/history")
     public String history(){
+
         return "history";
     }
-    @GetMapping("/leave-application.html")
+    @GetMapping("/leave-application")
     public String leaveapplication(){
         return "leaveapplication";
     }
-    @GetMapping("/leave-approval.html")
+    @GetMapping("/leave-approval")
     public String leaveapproval(){
+
         return "leaveapproval";
     }
-    @GetMapping("/login.html")
-    public String login(){
+    @GetMapping("/login")
+    public String login()
+    {
         return "login";
     }
-    @GetMapping("/status.html")
-    public String status(){
+    @GetMapping("/status")
+    public String status()
+    {
         return "status";
     }
-    @GetMapping("/workplace.html")
+    @GetMapping("/workplace")
     public String workplace(){
 
         return "workplace";
