@@ -7,8 +7,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const messageDiv = document.getElementById('message');
 
     // 正しいIDとパスワード
-    const correctUsername = 'SdjItou';
-    const correctPassword = 'itoutowa';
+    const correctUsername = 'postgres';
+    const correctPassword = 'postgres';
 
     // バリデーション
     if (username === correctUsername && password === correctPassword) {
