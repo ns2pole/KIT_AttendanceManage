@@ -10,11 +10,6 @@ public class Webcontroller {
         return "attendance";
     }
 
-    @GetMapping("/contact")
-    public String contact(){
-
-        return "contact";
-    }
     @GetMapping("/history")
     public String history(){
 
