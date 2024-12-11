@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cecb5f01-ca54-459e-9c1e-6718b731fbc4" name="変更" comment="" />
+    <list default="true" id="cecb5f01-ca54-459e-9c1e-6718b731fbc4" name="変更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/static/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/templates/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/templates/attendance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/test/java/com/example/AttandanceManage/AttandanceManageApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2pPWIerxQOTjmpVqAosnkUAwarw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,11 +46,32 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "r-sagyou",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/pompu/Documents/.開発演習本番"
+    "last_opened_file_path": "C:/Users/kumah/kadaiensyu",
+    "アプリケーション.AttandanceManageApplication.executor": "Debug"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="AttandanceManageApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.AttandanceManage.AttandanceManageApplication" />
+      <module name="kadaiensyu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.AttandanceManage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="アプリケーション.AttandanceManageApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="デフォルトタスク">

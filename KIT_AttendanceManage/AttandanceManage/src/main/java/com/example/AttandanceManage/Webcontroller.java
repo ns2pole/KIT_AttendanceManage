@@ -5,10 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Webcontroller {
-    @GetMapping("/attendance")
-    public String attendance(){
-        return "attendance";
-    }
 
     @GetMapping("/history")
     public String history(){
@@ -30,8 +26,7 @@ public class Webcontroller {
         return "login";
     }
     @GetMapping("/status")
-    public String status()
-    {
+    public String status() {
         return "status";
     }
     @GetMapping("/workplace")

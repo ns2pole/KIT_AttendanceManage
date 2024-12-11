@@ -65,6 +65,14 @@
         document.getElementById('checkIn').addEventListener('click', function() {
             const status = document.getElementById('status');
             if (workplaceSelect.value) {
+                    fetch('/api/attendance/checkin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ workplace: workplaceSelect.value }),
+        })
+
                 alert(`出勤しますか？ 勤務地: ${workplaceSelect.value}`);
                 status.textContent = '出勤済み';
             } else {
