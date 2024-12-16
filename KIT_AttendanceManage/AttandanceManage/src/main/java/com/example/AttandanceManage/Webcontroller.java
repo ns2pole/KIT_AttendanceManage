@@ -1,5 +1,6 @@
 package com.example.AttandanceManage;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -11,10 +12,14 @@ public class Webcontroller {
     }
 
     @GetMapping("/history")
-    public String history(){
-
+    public String history(Authentication authentication){
+        if (authentication.getAuthorities().stream()
+                .noneMatch(auth -> auth.getAuthority().equals("ROLE_ADMIN"))) {
+            return "redirect:/login";
+        }
         return "history";
     }
+
     @GetMapping("/leave-application")
     public String leaveapplication(){
         return "leaveapplication";

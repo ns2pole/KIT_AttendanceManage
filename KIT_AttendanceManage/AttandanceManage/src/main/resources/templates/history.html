@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,10 @@
             <tbody id="attendanceRecords"></tbody>
         </table>
         <p><a href="attendance.html">戻る</a></p>
-
+        <a class="button" th:href="@{/logout}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
+        <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+        </form>
     </div>
 
 

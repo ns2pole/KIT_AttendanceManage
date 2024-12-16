@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ContactController {
@@ -16,9 +17,9 @@ public class ContactController {
 
     // 連絡先登録を処理
     @PostMapping("/contact")
-    public String submitContactForm(Contact contact, Model model) {
+    public String submitContactForm(@RequestParam(name="phone", required=false) String phone, Contact contact, Model model) {
         // 登録処理（例：コンソール出力）
-        System.out.println("電話番号: " + contact.getPhone());
+        System.out.println("電話番号: " + phone);
         System.out.println("メールアドレス: " + contact.getEmail());
 
         // モデルにメッセージを追加
