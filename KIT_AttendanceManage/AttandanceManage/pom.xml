@@ -47,7 +47,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
         <!-- PostgreSQL JDBCドライバ (PostgreSQLと接続するために必要) -->
         <dependency>
             <groupId>org.postgresql</groupId>
