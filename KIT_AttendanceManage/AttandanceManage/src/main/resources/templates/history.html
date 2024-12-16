@@ -10,14 +10,12 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Attendance Date</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="attendance : ${attendances}">
         <td th:text="${attendance.id}"></td>
         <td th:text="${attendance.name}"></td>
-        <td th:text="${attendance.attendanceDate}"></td>
     </tr>
     </tbody>
 </table>

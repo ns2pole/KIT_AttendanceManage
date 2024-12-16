@@ -13,7 +13,7 @@ public class AttendanceService {
     private JdbcTemplate jdbcTemplate;
 
     public List<Attendance> getAllAttendances() {
-        String sql = "SELECT id, name, attendance_date FROM attendance";
+        String sql = "SELECT id, name FROM attendance";
 
         return jdbcTemplate.query(sql, new RowMapper<Attendance>() {
             @Override
@@ -21,7 +21,6 @@ public class AttendanceService {
                 Attendance attendance = new Attendance();
                 attendance.setId(rs.getInt("id"));
                 attendance.setName(rs.getString("name"));
-                attendance.setAttendanceDate(rs.getDate("attendance_date").toLocalDate());
                 return attendance;
             }
         });
