@@ -1,10 +1,33 @@
 package com.example.AttandanceManage;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+
+
 
 @Controller
 public class Webcontroller {
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    @GetMapping("/attendanceList")
+    public String index(Model model) {
+        String sql = "SELECT * FROM attendance";
+
+        System.out.println(jdbcTemplate.queryForList(sql));
+        return "attendance";
+    }
+
+    /** attendanceを表示*/
+    @GetMapping("/attendance")
+    public String showContactForm() {
+
+        return "attendance";
+    }
 
     @GetMapping("/history")
     public String history(){

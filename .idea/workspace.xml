@@ -8,16 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/mvnw" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/static/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/templates/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/resources/templates/attendance.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/test/java/com/example/AttandanceManage/AttandanceManageApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "r-sagyou",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kumah/kadaiensyu",
+    "last_opened_file_path": "C:/Users/kumah/kadaiensyu/KIT_AttendanceManage/AttandanceManage",
     "アプリケーション.AttandanceManageApplication.executor": "Debug"
   }
 }]]></component>
@@ -82,5 +82,16 @@
       <updated>1732668112573</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/KIT_AttendanceManage/AttandanceManage/src/main/java/com/example/AttandanceManage/Contact.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
