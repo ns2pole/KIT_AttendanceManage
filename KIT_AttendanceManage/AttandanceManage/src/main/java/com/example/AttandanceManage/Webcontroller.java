@@ -14,20 +14,6 @@ public class Webcontroller {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @GetMapping("/attendanceList")
-    public String index(Model model) {
-        String sql = "SELECT * FROM attendance";
-
-        System.out.println(jdbcTemplate.queryForList(sql));
-        return "attendance";
-    }
-
-    /** attendanceを表示*/
-    @GetMapping("/attendance")
-    public String showContactForm() {
-
-        return "attendance";
-    }
 
     @GetMapping("/history")
     public String history(){
