@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勤務場所登録</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>勤務場所登録</h2>
+        <form id="workplaceForm">
+            <label for="workplace">勤務場所:</label>
+            <input type="text" id="workplace" required>
+            <button type="submit">登録</button>
+        </form>
+        
+        <h3>登録された勤務場所</h3>
+        <ul id="workplaceList"></ul>
+
+        <p><a href="attendance.html">戻る</a></p>
+    </div>
+
+    <script>
+        // 勤務場所の登録
+        document.getElementById('workplaceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const workplaceInput = document.getElementById('workplace');
+            const workplace = workplaceInput.value;
+
+            // ローカルストレージから既存の勤務場所を取得
+            let workplaces = JSON.parse(localStorage.getItem('workplaces')) || [];
+            workplaces.push(workplace);
+            localStorage.setItem('workplaces', JSON.stringify(workplaces));
+            workplaceInput.value = '';
+
+            // 勤務場所の表示を更新
+            displayWorkplaces();
+        });
+
+        // 勤務場所の表示
+        function displayWorkplaces() {
+            const workplaceList = document.getElementById('workplaceList');
+            workplaceList.innerHTML = ''; // 一度リセット
+            const workplaces = JSON.parse(localStorage.getItem('workplaces')) || [];
+
+            workplaces.forEach((workplace, index) => {
+                const li = document.createElement('li');
+                li.textContent = workplace;
+
+                // 削除ボタンの作成
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = '削除';
+                deleteButton.onclick = function() {
+                    deleteWorkplace(index);
+                };
+
+                li.appendChild(deleteButton);
+                workplaceList.appendChild(li);
+            });
+        }
+
+        // 勤務場所の削除
+        function deleteWorkplace(index) {
+            let workplaces = JSON.parse(localStorage.getItem('workplaces')) || [];
+            workplaces.splice(index, 1); // 指定したインデックスの要素を削除
+            localStorage.setItem('workplaces', JSON.stringify(workplaces));
+            displayWorkplaces(); // 表示を更新
+        }
+
+        // 初回表示
+        displayWorkplaces();
+    </script>
+</body>
+</html>
