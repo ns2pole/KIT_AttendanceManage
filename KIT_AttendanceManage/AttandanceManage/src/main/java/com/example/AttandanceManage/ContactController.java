@@ -14,7 +14,6 @@ public class ContactController {
         return "contact";
     }
 
-
     // 連絡先登録を処理
     @PostMapping("/contact")
     public String submitContactForm(Contact contact, Model model) {

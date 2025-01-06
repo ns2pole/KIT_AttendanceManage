@@ -63,16 +63,14 @@
 
         // 出勤ボタンの処理
         document.getElementById('checkIn').addEventListener('click', function() {
-            const checkInT = new Date().toLocaleTimeString();
-
-
+            const status = document.getElementById('status');
             if (workplaceSelect.value) {
-                    fetch('/checkIn', {
+                    fetch('/api/attendance/checkin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ workplace: workplaceSelect.value, checkInTime: checkInT}),
+            body: JSON.stringify({ workplace: workplaceSelect.value }),
         })
 
                 alert(`出勤しますか？ 勤務地: ${workplaceSelect.value}`);
