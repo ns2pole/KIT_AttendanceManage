@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link th:href="@{/css/global.css}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="global_nav">
+        <ul>
+          <li>
+            <a>
+              <form id="logout" th:action="@{/logout}" method="post" class="nav_item" onclick="submit()">
+                ログアウト
+              </form>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+          <h3>ユーザー新規登録</h3>
+            <form th:action="@{/user/create}" method="post">
+              <table>
+                <tr>
+                  <th>ユーザー名</th>
+                  <td>
+                    <input type="text" name="name" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>パスワード</th>
+                  <td>
+                    <input type="password" name="password" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>権限</th>
+                  <td>
+                    <select name="role">
+                      <option value="ROLE_USER">一般ユーザー</option>
+                      <option value="ROLE_ADMIN">管理者</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+              <button onclick="submit">登録</button>
+
+            </form>
+
+  </body>
+</html>
