@@ -19,7 +19,7 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
         System.out.println(roles.contains("ROLE_USER"));
         if (roles.contains("ROLE_ADMIN")) {
             RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
-            redirectStrategy.sendRedirect(request, response, "/history");
+            redirectStrategy.sendRedirect(request, response, "/users");
         }else if(roles.contains("ROLE_USER")){
             RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
             redirectStrategy.sendRedirect(request, response, "/attendance");

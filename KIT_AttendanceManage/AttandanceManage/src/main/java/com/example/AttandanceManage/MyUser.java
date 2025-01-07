@@ -14,12 +14,14 @@ import lombok.Setter;
 public class MyUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // 自動生成されるIDフィールド
+    private Integer id; // 自動生成されるIDフィールド
+
 
     private String password;
+
     private String name;
     private String role;
-    public MyUser(Long id, String password, String name, String role) {
+    public MyUser(Integer id, String password, String name, String role) {
         this.id = id;
         this.password = password;
         this.name = name;

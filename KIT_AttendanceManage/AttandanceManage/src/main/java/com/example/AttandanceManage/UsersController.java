@@ -33,26 +33,25 @@ public class UsersController {
 	@PostMapping("/user/create")
 	public String create(@ModelAttribute MyUser user) {
 		String sql = "INSERT INTO my_user (name, role, password) VALUES (?, ?, ?)";
-		jdbcTemplate.update(sql, user.getName(), "ADMIN", "12345");
+		jdbcTemplate.update(sql, user.getName(), user.getRole(), user.getPassword());
 
 		return "redirect:/users";
 	}
 	@GetMapping("/user/edit/{id}")
 	public String edit(@PathVariable int id, Model model) {
-		model.addAttribute("users", userRepository.findByName("user3").get());
+		model.addAttribute("users", userRepository.findByid(id).get());
 		return "roleAdmin/users/edit";
 	}
 	@PostMapping("/user/update/{id}")
 	public String update(@ModelAttribute MyUser user) {
 		System.out.println(user);
-		userRepository.save(user);
-
+		String sql = "UPDATE my_user SET name = ?, password = ?, role = ? WHERE id = ?";
+		jdbcTemplate.update(sql, user.getName(), user.getPassword(), user.getRole(), user.getId());
 		return "redirect:/users";
 	}
 
 	@PostMapping("/user/delete/{id}")
 	public String delete(@ModelAttribute MyUser user) {
-		userRepository.delete(user);
 		return "redirect:/users";
 	}
 }
