@@ -1,19 +1,18 @@
 package com.example.AttandanceManage;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
-
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
 public class Webcontroller {
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
 
+    /** attendanceを表示*/
+    @GetMapping("/attendance")
+    public String showContactForm() {
+
+        return "attendance";
+    }
 
     @GetMapping("/history")
     public String history(){
@@ -35,7 +34,7 @@ public class Webcontroller {
         return "login";
     }
     @GetMapping("/status")
-    public String status() {
+    public String showStatusPage() {
         return "status";
     }
     @GetMapping("/workplace")
