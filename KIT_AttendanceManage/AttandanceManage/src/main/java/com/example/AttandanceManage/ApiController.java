@@ -35,7 +35,9 @@ import java.util.Map;
             LocalTime localTime = checkInTime.toLocalTime();
 
             String sql = "INSERT INTO attendance (出勤, 退勤, 休憩) VALUES (?, NULL, '00:00:00')";
+            String sql2 = "UPDATE myuser SET status = ? WHERE id = ?";
             jdbcTemplate.update(sql, Timestamp.from(checkInTime.toInstant()));
+            jdbcTemplate.update(sql2, "出勤中",1);
 
             return ResponseEntity.ok("出勤情報が登録できました");
         } catch (Exception e) {
