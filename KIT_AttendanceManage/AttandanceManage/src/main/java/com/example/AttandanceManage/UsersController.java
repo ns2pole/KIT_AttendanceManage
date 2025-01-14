@@ -42,6 +42,7 @@ public class UsersController {
 		model.addAttribute("users", userRepository.findByid(id).get());
 		return "roleAdmin/users/edit";
 	}
+
 	@PostMapping("/user/update/{id}")
 	public String update(@ModelAttribute MyUser user) {
 		System.out.println(user);
