@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f1718a2-d1ea-4d02-bf8f-4bc1f87795ef" name="変更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/resources/templates/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/resources/templates/attendance.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProblemsViewState">
@@ -79,16 +82,5 @@
       <updated>1736248758057</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/AttandanceManageApplication.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
