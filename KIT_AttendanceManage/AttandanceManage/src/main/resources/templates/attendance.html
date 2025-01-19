@@ -27,8 +27,10 @@
         
         <button id="checkIn">出勤</button>
         <button id="checkOut">退勤</button>
-        <button id="break">休憩</button>
-        
+        <button id="startBreak">休憩</button>
+        <button id="endBreak">休憩終了</button>
+
+
         <h3>リンク</h3>
         <div class="button-container">
             <a class="button" href="attendance">勤怠入力</a>
@@ -124,12 +126,48 @@
         alert('勤務地を選択してください。');
     }
 });
+        document.getElementById('startBreak').addEventListener('click', function () {
+    const currentTime = new Date().toISOString(); // 現在時刻を取得
+    fetch('/api/attendance/startBreak', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ breakStartTime: currentTime })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById('status').textContent = '休憩中'; // 状態を更新
+            alert('休憩を開始しました。');
+        } else {
+            alert(data.message || '休憩開始処理に失敗しました。');
+        }
+    })
+    .catch(error => {
+        console.error('休憩開始処理中にエラーが発生しました:', error);
+        alert('休憩開始処理に失敗しました。');
+    });
+});
 
-        // 休憩ボタンの処理
-        document.getElementById('break').addEventListener('click', function() {
-            alert('休憩しますか？');
-            document.getElementById('status').textContent = '休憩';
-        });
+document.getElementById('endBreak').addEventListener('click', function () {
+    const currentTime = new Date().toISOString(); // 現在時刻を取得
+    fetch('/api/attendance/endBreak', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ breakEndTime: currentTime })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById('status').textContent = '勤務中'; // 状態を更新
+            alert('休憩を終了しました。');
+        } else {
+            alert(data.message || '休憩終了処理に失敗しました。');
+        }
+    })
+    .catch(error => {
+        console.error('休憩終了処理中にエラーが発生しました:', error);
+        alert('休憩終了処理に失敗しました。');
+    });
+});
+
     </script>
-</body>
-</html>

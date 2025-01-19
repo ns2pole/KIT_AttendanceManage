@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f1718a2-d1ea-4d02-bf8f-4bc1f87795ef" name="変更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/AttendanceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/model/Attendance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/repository/AttendanceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/resources/templates/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/resources/templates/attendance.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +34,7 @@
     <setting file="file://$PROJECT_DIR$/AttandanceManage/pom.xml" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -63,7 +56,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "アプリケーション.AttandanceManageApplication.executor": "Run"
+    "アプリケーション.AttandanceManageApplication.executor": "Debug"
   }
 }]]></component>
   <component name="RecentsManager">
