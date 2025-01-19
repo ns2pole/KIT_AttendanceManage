@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f1718a2-d1ea-4d02-bf8f-4bc1f87795ef" name="変更" comment="">
-      <change afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/AttendanceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/model/Attendance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/repository/AttendanceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AttandanceManage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/AttendanceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/Webcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/model/Attendance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/repository/AttendanceRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AttandanceManage/src/main/resources/templates/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/AttandanceManage/src/main/resources/templates/attendance.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,6 +36,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AttandanceManage/pom.xml" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -62,6 +68,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.AttandanceManage" />
       <recent name="com.example.AttandanceManage.model" />
     </key>
   </component>
@@ -71,7 +78,7 @@
       <module name="AttandanceManage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.AttandanceManage.*" />
+          <option name="PATTERN" value="com.example.AttandanceManage.entity.Attendance.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,20 +102,5 @@
       <updated>1736248758057</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/AttandanceManage/src/main/java/com/example/AttandanceManage/repository/AttendanceRepository.java</url>
-          <line>11</line>
-          <properties class="com.example.AttandanceManage.repository.AttendanceRepository" method="save">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

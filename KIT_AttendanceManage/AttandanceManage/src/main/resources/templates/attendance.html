@@ -89,10 +89,41 @@
         });
 
         // 退勤ボタンの処理
-        document.getElementById('checkOut').addEventListener('click', function() {
-            alert('退勤しますか？');
-            document.getElementById('status').textContent = '未出勤';
+       document.getElementById('checkOut').addEventListener('click', function() {
+          const status = document.getElementById('status');
+    const workplaceSelect = document.getElementById('workplaceSelect');
+    const currentTime = new Date().toISOString(); // 退勤時刻の取得
+
+    if (workplaceSelect.value) {
+        // 退勤のAPIにPOSTリクエストを送る
+        fetch('/api/attendance/checkOut', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                workplace: workplaceSelect.value,
+                checkOutTime: currentTime, // 退勤時刻
+            })
+        })
+        .then(response => response.json()) // レスポンスをJSONとしてパース
+        .then(data => {
+            if (data.success) {
+                // 退勤処理成功後のステータス更新
+                alert(`退勤しますか？ 勤務地: ${workplaceSelect.value}`);
+                status.textContent = '退勤済み';  // ステータスを退勤済みに変更
+            } else {
+                alert(data.message || '退勤処理に失敗しました。');
+            }
+        })
+        .catch(error => {
+            console.error('退勤処理中にエラーが発生しました:', error);
+            alert('退勤処理に失敗しました。');
         });
+    } else {
+        alert('勤務地を選択してください。');
+    }
+});
 
         // 休憩ボタンの処理
         document.getElementById('break').addEventListener('click', function() {

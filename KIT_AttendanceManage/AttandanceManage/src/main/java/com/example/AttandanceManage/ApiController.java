@@ -1,18 +1,27 @@
 package com.example.AttandanceManage;
 
 
+
+import jakarta.persistence.Entity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Time;
+
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
+
 import java.time.LocalTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,6 +43,8 @@ import java.util.Map;
 
             LocalTime localTime = checkInTime.toLocalTime();
 
+
+
             String sql = "INSERT INTO attendance (出勤, 退勤, 休憩) VALUES (?, NULL, '00:00:00')";
             String sql2 = "UPDATE myuser SET status = ? WHERE id = ?";
             jdbcTemplate.update(sql, Timestamp.from(checkInTime.toInstant()));
@@ -47,11 +58,39 @@ import java.util.Map;
         }
     }
 
-        @GetMapping("/attendanceList")
-        public ResponseEntity<List<Map<String, Object>>> getAttendanceList() {
-            String sql = "SELECT 出勤, 退勤 FROM attendance";
-            List<Map<String, Object>> attendanceList = jdbcTemplate.queryForList(sql);
-            return ResponseEntity.ok(attendanceList);
+    @PostMapping("/checkOut")
+    public ResponseEntity<Map<String, Object>> checkOut(@RequestBody Map<String, String> requestData) {
+        try {
+            String checkOutTimeS = requestData.get("checkOutTime");
+
+            DateTimeFormatter formatter = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+            OffsetDateTime checkOutTime = OffsetDateTime.parse(checkOutTimeS, formatter);
+
+            String sql = "UPDATE attendance SET 退勤 = ? WHERE 出勤 IS NOT NULL AND 退勤 IS NULL";
+            String sql2 = "UPDATE myuser SET status = ? WHERE id = ?";
+
+            jdbcTemplate.update(sql, Timestamp.from(checkOutTime.toInstant()));
+            jdbcTemplate.update(sql2, "退勤中", 1);
+
+            // 成功時にJSONレスポンスを返す
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("message", "退勤情報が登録できました");
+
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Map<String, Object> errorResponse = new HashMap<>();
+            errorResponse.put("success", false);
+            errorResponse.put("message", "エラーが発生しました: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
         }
     }
+    @GetMapping("/attendanceList")
+         public ResponseEntity<List<Map<String, Object>>> getAttendanceList () {
+             String sql = "SELECT 出勤, 退勤 FROM attendance";
+             List<Map<String, Object>> attendanceList = jdbcTemplate.queryForList(sql);
+             return ResponseEntity.ok(attendanceList);
+         }
+     }
 
