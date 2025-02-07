@@ -8,7 +8,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffe9a7;
+  background-color: #CBD5EE;
   opacity: 0.4;
   z-index: -1;
 }
@@ -50,10 +50,10 @@ body {
   align-items: center;
   width: 100%;
   padding: 2.0em 1.0em;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #CBD5EE;
   background: linear-gradient(to right, #CBD5EE 50%, #EEEEEE 50%);
   background-size: 200% auto;
-  color: #EEEEEE;
+  color: #CBD5EE;
   font-size: 12px;
   text-decoration: none;
   text-align: center;
@@ -68,7 +68,7 @@ body {
   width: 100%;
   height: 100%;
   border-right: 1px solid #CBD5EE;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #CBD5EE;
 }
 ._a a:hover {
   color: #ffffff;
